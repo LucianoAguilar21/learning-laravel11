@@ -14,7 +14,7 @@ class ChirpController extends Controller
     public function index()
     {
         // añadir with('user') pidiendo el usuario en cada chirp para evitar que luego haga otra consulta trayendo el usuario
-        return view('chirps.index',['chirps'=>Chirp::with('user')->orderByDesc('created_at')->get()]);
+        return view('chirps.index',['chirps'=>Chirp::with('user')->orderByDesc('created_at')->paginate(10)]);
     }
 
     /**

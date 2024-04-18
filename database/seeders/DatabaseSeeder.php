@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Chirp;
 use App\Models\User;
+use Database\Factories\ChirpFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,5 +23,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(UserSeeder::class);
+        Chirp::factory(10000)->create();
     }
 }

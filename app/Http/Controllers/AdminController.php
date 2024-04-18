@@ -13,9 +13,10 @@ class AdminController extends Controller
      */
     public function index()
     {
+        
 
         return view('dashboard',[
-            'chirps'=>Chirp::with('user')->orderByDesc('created_at')->get(),
+            'chirps'=>Chirp::with('user')->orderByDesc('created_at')->paginate(10),
             'users'=>User::all()
         ]);
     }

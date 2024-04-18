@@ -29,6 +29,8 @@ class ChirpController extends Controller
         return response()->json($users);
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      */
