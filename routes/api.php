@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/chirps', [ChirpController::class, 'getChirps'])->middleware('auth:sanctum');
 
-Route::get('/users', [ChirpController::class, 'getUsers'])->middleware('auth:sanctum');
+Route::get('/users', [ChirpController::class, 'getUsers'])->middleware('auth:sanctum')->name('api.users');
