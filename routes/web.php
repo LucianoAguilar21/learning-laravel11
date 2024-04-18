@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RoleMiddleware;
@@ -32,5 +33,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::middleware('auth','role:admin')->group(function () {
-    Route::view('/dashboard','dashboard')->name('dashboard');
+    Route::get('/dashboard',[AdminController::class ,'index'])->name('dashboard');
 });
