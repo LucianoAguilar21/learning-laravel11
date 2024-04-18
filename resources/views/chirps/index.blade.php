@@ -19,6 +19,9 @@
             </div>
 
             <div class="mt-6 bg-white dark:bg-gray-800 shadow-sm rounded-lg divide-y dark:divide-gray-900">
+                <div  aria-label="Pagination" aria-current="page" >
+                    {{$chirps->links()}}
+                </div>
                 @foreach ($chirps as $chirp)
 
                 <div class="p-6 flex space-x-2">
@@ -61,6 +64,7 @@
                     @endcan
                 </div>
                 @endforeach
+
             </div>
 
         </div>

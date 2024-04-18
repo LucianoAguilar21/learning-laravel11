@@ -41,4 +41,8 @@
         @endcan
     </div>
     @endforeach
+
+    <div>
+        {{$chirps->links()}}
+    </div>
 </div>
